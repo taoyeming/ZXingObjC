@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZXingObjC'
-  s.version          = '0.1.0'
+  s.version          = '3.6.4'
   s.summary          = 'A short description of ZXingObjC.'
 
 # This description is used to generate tags and improve search results.
@@ -21,22 +21,19 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/11702701/ZXingObjC'
+  s.homepage         = 'https://github.com/taoyeming/ZXingObjC.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '11702701' => 'taoyeming.tym@alibaba-inc.com' }
-  s.source           = { :git => 'https://github.com/11702701/ZXingObjC.git', :tag => s.version.to_s }
+  s.author           = { 'taoyeming' => 'taoyeming.tym@alibaba-inc.com' }
+  s.source           = { :git => 'https://github.com/taoyeming/ZXingObjC.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'ZXingObjC/Classes/**/*'
+  s.source_files = 'ZXingObjC/Classes/**/*.{h,m}'
   
-  # s.resource_bundles = {
-  #   'ZXingObjC' => ['ZXingObjC/Assets/*.png']
-  # }
+  s.vendored_library = "ZXingObjC/Classes/*.a"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "ImageIO", "QuartzCore"
+
 end

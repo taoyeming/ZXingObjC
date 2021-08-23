@@ -1,6 +1,0 @@
-use_frameworks!
-target 'ZXingObjC_Tests' do
-  pod 'ZXingObjC', :path => '../'
-  
-  
-end
